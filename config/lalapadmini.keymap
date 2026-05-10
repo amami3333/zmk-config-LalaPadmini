@@ -215,6 +215,11 @@
             bindings = <&kp LWIN>;
             key-positions = <30 31>;
         };
+
+        drag {
+            bindings = <&kp LS(LC(D))>;
+            key-positions = <16 17>;
+        };
     };
 
     macros {
