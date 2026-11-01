@@ -301,7 +301,7 @@
 &lt 1 Q            &lt 2 W          &kp E              &kp R                &kp T           &bt_kp_mac 0 Y    &mt2 LS(LC(D)) U      &lt 5 I           &kp O         &mt2 LS(LG(D)) P
 &mt2 LCTRL A       &lt 10 S         &mt2 LANGUAGE_2 D  &mt2 LANGUAGE_1 F    &kp G           &kp H             &mkp2 LCLK J          &mt2 LG(SPACE) K  &mkp2 RCLK L  &mt2 LEFT_SHIFT MINUS
 &mt2 LEFT_SHIFT Z  &mt2 LEFT_ALT X  &kp C              &bt_kp_and 0 V       &bt_kp_win 0 B  &bt_kp_ipad 0 N   &bt_kp_iphone 0 M     &kp COMMA         &kp PERIOD    &mt LCMD SLASH
-&mo 1              &kp LCTRL                           &mt2 LEFT_GUI SPACE  &lt 9 TAB       &lt 10 BACKSPACE  &mt2 RIGHT_GUI ENTER                    &kp RCTRL     &mo 2
+&mo 11             &kp LCTRL                           &mt2 LEFT_GUI SPACE  &lt 9 TAB       &lt 10 BACKSPACE  &mt2 RIGHT_GUI ENTER                    &kp RCTRL     &mo 2
             >;
         };
 
@@ -412,6 +412,18 @@
             >;
 
             sensor-bindings = <&volume_up_down>;
+        };
+
+        layer_11 {
+            display-name = "system_layer";
+            bindings = <
+&trans  &trans  &trans  &trans       &trans      &out OUT_TOG  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2    &bt BT_SEL 3
+&trans  &trans  &trans  &bootloader  &sys_reset  &sys_reset    &bootloader   &bt BT_CLR    &bt BT_CLR_ALL  &bt BT_SEL 4
+&trans  &trans  &trans  &trans       &trans      &trans        &trans        &trans        &trans          &trans
+&trans  &trans          &trans       &trans      &trans        &trans                      &trans          &trans
+            >;
+
+            sensor-bindings = <&volume_up_down>, <&volume_up_down>;
         };
     };
 
