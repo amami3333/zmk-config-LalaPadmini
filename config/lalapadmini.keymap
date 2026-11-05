@@ -171,7 +171,7 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <200>;
             require-prior-idle-ms = <125>;
-            bindings = <&bt_win>, <&kp>;
+            bindings = <&bt_iphone>, <&kp>;
 
             label = "BT_KP_WIN";
         };
@@ -261,10 +261,10 @@
             label = "BT_MAC";
         };
 
-        bt_win: bt_win {
+        bt_iphone: bt_win {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 2 &to 1>;
+            bindings = <&bt BT_SEL 2 &to 0>;
             label = "BT_WIN";
         };
 
@@ -273,13 +273,6 @@
             #binding-cells = <0>;
             bindings = <&bt BT_SEL 3 &to 1>;
             label = "BT_ANDROID";
-        };
-
-        bt_iphone: bt_iphone {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&bt BT_SEL 4 &to 0>;
-            label = "BT_IPHONE";
         };
 
         bt_ipad: bt_ipad {
@@ -418,7 +411,7 @@
             display-name = "system_layer";
             bindings = <
 &trans  &trans  &trans  &trans       &trans      &out OUT_TOG  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2    &bt BT_SEL 3
-&trans  &trans  &trans  &bootloader  &sys_reset  &sys_reset    &bootloader   &bt BT_CLR    &bt BT_CLR_ALL  &bt BT_SEL 4
+&trans  &trans  &trans  &bootloader  &sys_reset  &sys_reset    &bootloader   &bt BT_CLR    &bt BT_CLR_ALL  &trans
 &trans  &trans  &trans  &trans       &trans      &trans        &trans        &trans        &trans          &trans
 &trans  &trans          &trans       &trans      &trans        &trans                      &trans          &trans
             >;
